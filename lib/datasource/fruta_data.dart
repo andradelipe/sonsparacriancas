@@ -9,16 +9,16 @@ final List<FrutaModel> frutas = [
   FrutaModel(
     name: 'Uva',
     imageAsset: 'images/uva.png',
-    soundAsset: 'uva.mp3',
+    soundAsset: 'Uva.mp3',
   ),
   FrutaModel(
     name: 'Melancia',
     imageAsset: 'images/melancia.png',
-    soundAsset: '',
+    soundAsset: 'maçã.mp3',
   ),
   FrutaModel(
     name: 'Maça',
     imageAsset: 'images/maca.png',
-    soundAsset: 'maça.mp3',
+    soundAsset: 'maçã.mp3',
   ),
 ];

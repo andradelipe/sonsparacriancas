@@ -1,4 +1,4 @@
-import 'package:audioplayers/audioplayers.dart';
+import 'package:sons_para_criancas/models/image_sounds_object.dart';
 
 ///O ideal é modelar seus dados, no caso os animais do seu exemplo são sua fonte
 ///de dados, ou seja, eles são um objeto, logo modelamos ele com uma classe dart
@@ -8,21 +8,11 @@ import 'package:audioplayers/audioplayers.dart';
 ///Além disso a modelagem permite você isolar tudo referente as responsabilidades
 ///do objeto somente nesta classe, para facilitar a manutenção, neste exemplo
 ///temos o método tocarSom, que seria uma função do objeto animal.
-var cache = AudioCache();
-var player = AudioPlayer();
 
-class AnimalModel {
-  String name;
-  String imageAsset;
-  String soundAsset;
-  AnimalModel({
-    required this.name,
-    required this.imageAsset,
-    required this.soundAsset,
-  });
-
-  void tocarSom() async {
-    player.stop();
-    player = await cache.play(soundAsset);
-  }
+class AnimalModel extends ImageSoundObject {
+  AnimalModel(
+      {required String name,
+      required String imageAsset,
+      required String soundAsset})
+      : super(name: name, imageAsset: imageAsset, soundAsset: soundAsset);
 }

@@ -7,14 +7,19 @@ final List<AnimalModel> animals = [
     soundAsset: 'macaco3.wav',
   ),
   AnimalModel(
-    name: 'Galo',
-    imageAsset: 'images/galo.png',
-    soundAsset: 'galo2.wav',
+    name: 'Vaca',
+    imageAsset: 'images/vaca.png',
+    soundAsset: 'som_de_boi.mp3',
   ),
   AnimalModel(
     name: 'Gato',
     imageAsset: 'images/cat3.png',
     soundAsset: 'gato.mp3',
+  ),
+  AnimalModel(
+    name: 'Leao',
+    imageAsset: 'images/leao.png',
+    soundAsset: 'leao.mp3',
   ),
   AnimalModel(
     name: 'Cavalo',
@@ -40,5 +45,10 @@ final List<AnimalModel> animals = [
     name: 'Porco',
     imageAsset: 'images/pig.png',
     soundAsset: 'porco3.wav',
+  ),
+  AnimalModel(
+    name: 'Galo',
+    imageAsset: 'images/galo.png',
+    soundAsset: 'galo2.wav',
   ),
 ];

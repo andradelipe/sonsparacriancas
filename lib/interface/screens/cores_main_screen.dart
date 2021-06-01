@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:sons_para_criancas/datasource/animals_data.dart';
-import 'package:sons_para_criancas/models/animal_model.dart';
+import 'package:sons_para_criancas/datasource/cores_data.dart';
+import 'package:sons_para_criancas/models/cor_model.dart';
 
 ///Esse é um exemplo de código de tela, ele geralmente tem um material widget
 ///no início, nesse caso o Scaffold que herda o tema do MaterialApp
 ///Cada tela do seu app o ideal é que seja separado em arquivos diferentes
-class AnimalMainScreen extends StatelessWidget {
+class CorMainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.indigo[300],
-        title: Text('Animais'),
+        backgroundColor: Color(0xFFdfb6ff),
+        title: Text('Cores'),
       ),
-      backgroundColor: Colors.limeAccent,
+      backgroundColor: Color(0xffffdfb6),
       body: SafeArea(
         child: GridView.builder(
           primary: false,
@@ -23,9 +23,9 @@ class AnimalMainScreen extends StatelessWidget {
             mainAxisSpacing: 1,
             crossAxisSpacing: 1,
           ),
-          itemCount: animals.length,
+          itemCount: cores.length,
           itemBuilder: (context, index) {
-            return AnimalCard(animal: animals[index]);
+            return AnimalCard(cor: cores[index]);
           },
         ),
       ),
@@ -43,10 +43,10 @@ class AnimalMainScreen extends StatelessWidget {
 ///Também vale ressaltar a importância de modelar as classes, aqui seu widget só
 ///recebe a classe modelo e monta seu conteúdo com base nela
 class AnimalCard extends StatelessWidget {
-  final AnimalModel animal;
+  final CorModel cor;
   const AnimalCard({
     Key? key,
-    required this.animal,
+    required this.cor,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -54,11 +54,11 @@ class AnimalCard extends StatelessWidget {
       elevation: 10,
       child: InkWell(
         onTap: () {
-          animal.tocarSom();
+          cor.tocarSom();
         },
         child: Container(
           child: Image.asset(
-            animal.imageAsset,
+            cor.imageAsset,
             fit: BoxFit.scaleDown,
           ),
         ),

@@ -14,11 +14,31 @@ final List<FrutaModel> frutas = [
   FrutaModel(
     name: 'Melancia',
     imageAsset: 'images/melancia.png',
-    soundAsset: '',
+    soundAsset: 'melancia.mp3',
   ),
   FrutaModel(
     name: 'Maça',
     imageAsset: 'images/maca.png',
-    soundAsset: 'maça.mp3',
+    soundAsset: 'maca.mp3',
+  ),
+  FrutaModel(
+    name: 'Morango',
+    imageAsset: 'images/morango.png',
+    soundAsset: 'morango.mp3',
+  ),
+  FrutaModel(
+    name: 'Abacaxi',
+    imageAsset: 'images/abacaxi.png',
+    soundAsset: 'abacaxi.mp3',
+  ),
+  FrutaModel(
+    name: 'Kiwi',
+    imageAsset: 'images/kiwi.png',
+    soundAsset: 'kiwi.mp3',
+  ),
+  FrutaModel(
+    name: 'Lranja',
+    imageAsset: 'images/laranja.png',
+    soundAsset: 'laranja.mp3',
   ),
 ];
